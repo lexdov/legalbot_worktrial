@@ -47,8 +47,8 @@ He separado el proceso de Entrenamiento y Tagging de Documentos en dos archivos 
 ### entrenamiento.py 
 Realiza el preprocesamiento del texto, y luego construye los clusters que se requieran
 
-### tagging
-Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster), porcentaje de pertenencia de cada documento a cada cluster, y estadisticas de cada cluster con respecto al total de los documentos.
+### tagging.py
+Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster), porcentaje de pertenencia de cada documento a cada cluster, y estadísticas de cada cluster con respecto al total de los documentos.
 
 # Resultados
 
@@ -57,7 +57,7 @@ https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=shari
 https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing
 https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=sharing
 
-Los resultados que se muestran a continuacion estan basados en la construcción de 5 Clusters usando LDA.
+Los resultados que se muestran a continuación estan basados en la construcción de 5 Clusters usando LDA.
 
 
 
