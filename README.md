@@ -11,19 +11,19 @@ Se propone la utilizacion de un algoritmo de clustering llamado Latent Dirichlec
 Otros enfoques de clusterizacion, como por ejemplo Gaussian Mixture Models, obligan a que cada documento debe pertenecer a un solo Cluster, con lo cual se pierde información al momento de la asignación.  Por otra parte, si se quiere asignar a un solo cluster usando LDA, se puede hacer simplemente tomando el cluster con mayor probabilidad.  
 
 ## Evaluación
-A diferencia de metodos Supervisados, en donde se aplican metricas como F1-Score, Precission y Recall, en metodos No-Supervisados existen 2 metricas comunmente usadas para evaluar la clusterizacion: Coherencia y Perplexity.  
+A diferencia de métodos Supervisados, en donde se aplican métricas como F1-Score, Precission y Recall, en métodos No-Supervisados existen 2 métricas comúnmente usadas para evaluar la clusterización: Coherencia y Perplexity.  
 ### Perplexity 
 Mide que tan bien puedo predecir la siguiente palabra para un conjunto de palabras dadas https://en.wikipedia.org/wiki/Perplexity dado un Modelo de Lenguaje previamente calculado
 
 ### Coherence
-Mide que tan similares son los textos que se encuentran en un Cluster en especifico. http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf.
+Mide que tan similares son los textos que se encuentran en un Cluster en específico. http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf.
 
-En este Desafío he elegido la métrica de Coherencia para determinar el número óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretación es muy simple, a mayor coherencia mejor la clusterizacion.
+En este Desafío he elegido la métrica de Coherencia para determinar el número óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretación es muy simple, a mayor coherencia mejor la clusterización.
 
 
 # Decisiones de implementación
 ## Uso de n-grams de segundo nivel
-He usado 2-grams (bigrams) para capturar la semantica de terminos compuestos, y asi el clustering puede enriquecer los resultados al considerar estos terminos como una palabra. Algunos de los bigrams que se generan son: zona franca, propios ajenos, directa indidirectamente, nuevos usados.
+He usado 2-grams (bigrams) para capturar la semántica de términos compuestos, y así el clustering puede enriquecer los resultados al considerar estos terminos como una palabra. Algunos de los bigrams que se generan son: `zona franca`, `propios ajenos`, `directa indidirectamente`, `nuevos usados`.
 
 ## Eliminación de stopwords
 Se eliminan los stopwords ya que no contribuyen a la semántica de los clusters que se quieren formar. Estos stopwords pueden aparecer con mucha frecuencia en muchos documentos a lo largo del corpus, y no hacen diferencia al momento de decidir a que cluster asignar un documento.   
@@ -39,21 +39,21 @@ Se usa lemmatizacion en Sustantivos, Adjetivos, Verbos y Adverbios, ya que estas
 Es posible construir WordEmbeddings para la visualizacion de Clusters, pero nuevamente está la limitante de los pocos datos.  Con 50.000 documentos ya es posible construir un Embedding de calidad.
 
 ## Persistencia del Preprocesamiento
-Todo el preprocesamiento de los datos conlleva un tiempo importante, y siempre generará el mismo resultado, por lo que he decidido almacenar estos resultados, para asi solo tener que ejecutarlos una sola vez;  luego simplemente hay que concentrarse en experimentar con la clusterizacion.
+Todo el preprocesamiento de los datos conlleva un tiempo importante, y siempre generará el mismo resultado, por lo que he decidido almacenar estos resultados, para así solo tener que ejecutarlos una sola vez;  luego simplemente hay que concentrarse en experimentar con la clusterización.
 
 ## Entrenamiento vs Tagging de Documentos
 He separado el proceso de Entrenamiento y Tagging de Documentos en dos archivos fuente separados.
 
 ### entrenamiento.py 
-Realiza el preprocesamiento del texto, y luego construye los clusters que se requieran
+Realiza el preprocesamiento del texto, y luego construye los Clusters que se requieran
 
 ### tagging.py
-Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster), porcentaje de pertenencia de cada documento a cada cluster, y estadísticas de cada cluster con respecto al total de los documentos.
+Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster), porcentaje de pertenencia de cada documento a cada Cluster, y estadísticas de cada Cluster con respecto al total de los documentos.
 
 # Resultados
 
 ## Número óptimo de clusters
-Los siguintes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
+Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
 
 Fig 1 -> https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing     
 Fig 2 -> https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
@@ -74,7 +74,7 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 | 3  | TRANSPORTE Y MAQUINARIA  |actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler|
 | 4  | SOCIEDADES  | clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero|
 
-Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección manual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras.
+Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección visual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras (este etiquetado se puede mejorar con un experto en temas de escrituras de empresas).
 
 ## Ejemplos de documentos en cada cluster
 | Cluster Number  | Documento |
@@ -88,6 +88,8 @@ Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe reali
 # Conclusión
 
 # Referencias
+
+# Como ejecutar el código
 
 
 # Requirements.txt
