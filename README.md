@@ -11,17 +11,17 @@ Se propone la utilizacion de un algoritmo de clustering llamado Latent Dirichlec
 Otros enfoques de clusterizacion, como por ejemplo Gaussian Mixture Models, obligan a que cada documento debe pertenecer a un solo Cluster, con lo cual se pierde información al momento de la asignación.  Por otra parte, si se quiere asignar a un solo cluster usando LDA, se puede hacer simplemente tomando el cluster con mayor probabilidad.  
 
 ## Evaluación
-A diferencia de metodos supervisados, en donde se aplican metricas como F1-Score, Precission y Recall, en metodos no supervisados existen 2 metricas comunmente usadas para evaluar la clusterizacion: Coherencia y Perplexity.  
+A diferencia de metodos Supervisados, en donde se aplican metricas como F1-Score, Precission y Recall, en metodos No-Supervisados existen 2 metricas comunmente usadas para evaluar la clusterizacion: Coherencia y Perplexity.  
 ### Perplexity 
 Mide que tan bien puedo predecir la siguiente palabra para un conjunto de palabras dadas https://en.wikipedia.org/wiki/Perplexity dado un Modelo de Lenguaje previamente calculado
 
 ### Coherence
 Mide que tan similares son los textos que se encuentran en un Cluster en especifico. http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf.
 
-Para el Desafío he elegido la metrica de Coherencia para determinar el numero óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretación es muy simple, a mayor coherencia mejor la clusterizacion.
+En este Desafío he elegido la métrica de Coherencia para determinar el número óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretación es muy simple, a mayor coherencia mejor la clusterizacion.
 
 
-# Decisiones de implementacion
+# Decisiones de implementación
 ## Uso de n-grams de segundo nivel
 He usado 2-grams (bigrams) para capturar la semantica de terminos compuestos, y asi el clustering puede enriquecer los resultados al considerar estos terminos como una palabra. Algunos de los bigrams que se generan son: zona franca, propios ajenos, directa indidirectamente, nuevos usados.
 
@@ -71,8 +71,7 @@ Los resultados que se muestran a continuación estan basados en la construcción
 | 3  | TRANSPORTE Y MAQUINARIA  |'actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler'|
 | 4  | SOCIEDADES  | 'clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero'|
 
-
-
+Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección manual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras.
 
 ## Ejemplos de documentos en cada cluster
 
