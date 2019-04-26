@@ -62,23 +62,17 @@ https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=shari
 Los diferentes experimentos realizados con distintos numeros de clusters......
 Los resultados que se muestran a continuación estan basados en la construcción de 5 Clusters usando LDA.
 
-## Etiquetado de Clusters
-| Cluster Number  | Cluster Name |
-| ------------- | ------------- |
-| 0  | COMERCIO MINORISTA  |
-| 1  | SERVICIOS PROFESIONALES  |
-| 2  | CONSTRUCCION / INDUSTRIAL  |
-| 3  | TRANSPORTE Y MAQUINARIA  |
-| 4  | SOCIEDADES  |
+## Etiquetado de Clusters y Palabras Características
+| Cluster Number  | Cluster Name | Palabras Características
+| ------------- | ------------- |------------- |
+| 0  | COMERCIO MINORISTA  |'venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar'|
+| 1  | SERVICIOS PROFESIONALES  |'servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa'|
+| 2  | CONSTRUCCION / INDUSTRIAL  |'construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria'|
+| 3  | TRANSPORTE Y MAQUINARIA  |'actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler'|
+| 4  | SOCIEDADES  | 'clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero'|
 
 
-CLUSTER 1
-## Palabras caracteristicas de cada cluster
-0: 'venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar', 
-1: 'servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa', 
-2: 'construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria', 
-3: 'actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler', 
-4: 'clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero' 		SOCIEDADES
+
 
 ## Ejemplos de documentos en cada cluster
 
