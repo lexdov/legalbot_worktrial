@@ -1,7 +1,7 @@
 # Desafío Legalbot
 Se requiere crear un algoritmo que categorice el texto de constitución de empresas en un número de Clusters a determinar.
 
-# Descripcion del Problema
+# Descripción del Problema
 Existe un archivo objetos.txt que contine 2863 líneas (cuerpo), en donde cada una representa el texto que describe la creación de una empresa. El idioma es español, y no existe una categoría asignada, simplemente el texto plano.  Se debe determinar el número de Clusters a construir, realizar la clusterizacion, evaluar los resultados, y presentar las métricas correspondientes.
 
 # Solución Propuesta
@@ -13,29 +13,29 @@ Otros enfoques de clusterizacion, como por ejemplo Gaussian Mixture Models, obli
 ## Evaluación
 A diferencia de metodos supervisados, en donde se aplican metricas como F1-Score, Precission y Recall, en metodos no supervisados existen 2 metricas comunmente usadas para evaluar la clusterizacion: Coherencia y Perplexity.  
 ### Perplexity 
-Mide que tan bien puedo predecir la siguiente palabra para un conjunto de palabras dadas https://en.wikipedia.org/wiki/Perplexity dado un Modelo de Lenguaje previamente Calculado
+Mide que tan bien puedo predecir la siguiente palabra para un conjunto de palabras dadas https://en.wikipedia.org/wiki/Perplexity dado un Modelo de Lenguaje previamente calculado
 
 ### Coherence
 Mide que tan similares son los textos que se encuentran en un Cluster en especifico. http://svn.aksw.org/papers/2015/WSDM_Topic_Evaluation/public.pdf.
 
-Para el Desafío he elegido la metrica de Coherencia para determinar el numero óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretacion es muy simple, a mayor coherencia mejor la clusterizacion.
+Para el Desafío he elegido la metrica de Coherencia para determinar el numero óptimo de Clusters a usar, ya que viene implementada directamente en el framework utilisado GenSim, y su interpretación es muy simple, a mayor coherencia mejor la clusterizacion.
 
 
 # Decisiones de implementacion
 ## Uso de n-grams de segundo nivel
 He usado 2-grams (bigrams) para capturar la semantica de terminos compuestos, y asi el clustering puede enriquecer los resultados al considerar estos terminos como una palabra. Algunos de los bigrams que se generan son: zona franca, propios ajenos, directa indidirectamente, nuevos usados.
 
-## Eliminacion de stopwords
+## Eliminación de stopwords
 Se eliminan los stopwords ya que no contribuyen a la semántica de los clusters que se quieren formar. Estos stopwords pueden aparecer con mucha frecuencia en muchos documentos a lo largo del corpus, y no hacen diferencia al momento de decidir a que cluster asignar un documento.   
 
-## No uso de TF-IDF como mecanismo de caracterizacion de documentos
+## No uso de TF-IDF como mecanismo de caracterización de documentos
 Este mecanismo es muy usado feature extractor para determinar las principales palabras de cada documento, pero se requiere un cuerpo de datos mas grande (mas documentos y con mas contenido), que permita establecer con claridad las features importantes
 
-## Lemmatizacion
+## Lemmatización
 Se usa lemmatizacion en Sustantivos, Adjetivos, Verbos y Adverbios, ya que estas entidades son las que tienen terminaciones con mas variaciones en el idioma español.  Estas variaciones no aportan a resolver el problema en cuestión, ya aumentan la dimensionalidad del problema (cada palabra se considera una dimension en NLP) sin agregar mas semántica a los clusters.
 
 
-## No uso de embeddings para visualizacion 
+## No uso de embeddings para visualización 
 Es posible construir WordEmbeddings para la visualizacion de Clusters, pero nuevamente está la limitante de los pocos datos.  Con 50.000 documentos ya es posible construir un Embedding de calidad.
 
 ## Persistencia del Preprocesamiento
@@ -52,12 +52,35 @@ Asigna cada documento a un cluster en particular, y calcula datos adicionales pa
 
 # Resultados
 
+## Número óptimo de clusters
 Los siguintes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
+
 https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
 https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing
 https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=sharing
 
+Los diferentes experimentos realizados con distintos numeros de clusters......
 Los resultados que se muestran a continuación estan basados en la construcción de 5 Clusters usando LDA.
+
+## Etiquetado de Clusters
+| Cluster Number  | Cluster Name |
+| ------------- | ------------- |
+| 0  | COMERCIO MINORISTA  |
+| 1  | SERVICIOS PROFESIONALES  |
+| 2  | CONSTRUCCION / INDUSTRIAL  |
+| 3  | TRANSPORTE Y MAQUINARIA  |
+| 4  | SOCIEDADES  |
+
+
+CLUSTER 1
+## Palabras caracteristicas de cada cluster
+0: 'venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar', 
+1: 'servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa', 
+2: 'construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria', 
+3: 'actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler', 
+4: 'clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero' 		SOCIEDADES
+
+## Ejemplos de documentos en cada cluster
 
 
 
