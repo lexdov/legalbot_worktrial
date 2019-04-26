@@ -55,16 +55,19 @@ Asigna cada documento a un cluster en particular, y calcula datos adicionales pa
 ## Número óptimo de clusters
 Los siguintes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
 
-https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
-https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing
-https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=sharing
+Fig 1 -> https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing     
+Fig 2 -> https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
+Fig 3 -> https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=sharing
 
-Los diferentes experimentos realizados con distintos numeros de clusters......
-Los resultados que se muestran a continuación estan basados en la construcción de 5 Clusters usando LDA.
+Figura 1 -> 5 modelos de 1 a 5 Clusters
+Figura 2 -> 10 modelos de 1 a 10 Clusters
+Figura 3 -> 10 modelos de 1 a 10 Clusters
+
+Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 
 ## Etiquetado de Clusters y Palabras Características
-| Cluster Number  | Cluster Name | Palabras Características
-| ------------- | ------------- |------------- |
+| Cluster Number  | Cluster Name | Palabras Características|
+| :-------------: | :-------------: |------------- |
 | 0  | COMERCIO MINORISTA  |'venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar'|
 | 1  | SERVICIOS PROFESIONALES  |'servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa'|
 | 2  | CONSTRUCCION / INDUSTRIAL  |'construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria'|
@@ -74,8 +77,13 @@ Los resultados que se muestran a continuación estan basados en la construcción
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección manual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras.
 
 ## Ejemplos de documentos en cada cluster
-
-
+| Cluster Number  | Documento | Palabras Características|
+| :-------------: | :-------------: |------------- |
+| 0  | COMERCIO AL POR MENOR DE OTROS PROD. NUEVOS EN ALMC. ESPECIALIZADOS, COMERCIO AL POR MENOR NO ESPECIALIZADO EN ALMACENES, COMERCIO AL POR MENOR NO REALIZADO EN ALMACENES.  |
+| 1  | Enseñanza y capacitación a personas y empresas  |
+| 2  | Venta de insumos mineros. Suministro de insumos, equipos, partes y piezas para la minería. Servicios y asesorías. Importaciones.  |
+| 3  | ACTIVIDADES DE ARQUITECTURA E INGENIERÍA Y OTRAS ACTIVIDADES TÉCNICAS, CONSTRUCCIÓN, OTRAS ACTIVIDADES DE SERVICIOS.  |
+| 4  | TURISMO RURAL Y URBANO, ASISTENCIA A TURISTAS, TRANSPORTES DE PASAJEROS, HOSPEDAJES, CABAÑAS, Y CAMPING.  |
 
 # Conclusión
 
