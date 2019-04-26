@@ -68,11 +68,11 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 ## Etiquetado de Clusters y Palabras Características
 | Cluster Number  | Cluster Name | Palabras Características|
 | :-------------: | :-------------: |------------- |
-| 0  | COMERCIO MINORISTA  |'venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar'|
-| 1  | SERVICIOS PROFESIONALES  |'servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa'|
-| 2  | CONSTRUCCION / INDUSTRIAL  |'construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria'|
-| 3  | TRANSPORTE Y MAQUINARIA  |'actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler'|
-| 4  | SOCIEDADES  | 'clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero'|
+| 0  | COMERCIO MINORISTA  |venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar|
+| 1  | SERVICIOS PROFESIONALES  |servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa|
+| 2  | CONSTRUCCION / INDUSTRIAL  |construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria|
+| 3  | TRANSPORTE Y MAQUINARIA  |actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler|
+| 4  | SOCIEDADES  | clase, bien, actividad, sociedad, relacionar, contar, tipo, objetar, general, tercero|
 
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección manual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras.
 
