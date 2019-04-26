@@ -77,8 +77,8 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección manual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras.
 
 ## Ejemplos de documentos en cada cluster
-| Cluster Number  | Documento | Palabras Características|
-| :-------------: | :-------------: |------------- |
+| Cluster Number  | Documento |
+| :-------------: | :------------- |
 | 0  | COMERCIO AL POR MENOR DE OTROS PROD. NUEVOS EN ALMC. ESPECIALIZADOS, COMERCIO AL POR MENOR NO ESPECIALIZADO EN ALMACENES, COMERCIO AL POR MENOR NO REALIZADO EN ALMACENES.  |
 | 1  | Enseñanza y capacitación a personas y empresas  |
 | 2  | Venta de insumos mineros. Suministro de insumos, equipos, partes y piezas para la minería. Servicios y asesorías. Importaciones.  |
