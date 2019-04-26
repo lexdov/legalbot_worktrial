@@ -39,7 +39,7 @@ Para el Desaf√≠o he elegido la metrica de Coherencia para determinar el numero √
 ## Entrenamiento vs Tagging de Documentos
 
 # Resultados
-![alt text](https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing)
+https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
 
 # Conclusion
 
