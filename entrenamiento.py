@@ -41,6 +41,7 @@ def lemmatization(lineas, entiquetas_de_interes):
     :param entiquetas_de_interes:
     :return:
     """
+
     lemmas = []
     for linea in lineas:
         doc_linea = nlp_espanol(" ".join(linea))
@@ -54,21 +55,18 @@ def generate_corpus(objetos):
     :param objetos:
     :return:
     """
+
     print("\nConstruyendo N-gramas.............")
     n2_gram = build_n_grams(objetos)
-    print(n2_gram[objetos[0]])
 
     print("\nEliminando stopwords.............")
     objetos = eliminar_stopwords(objetos)
-    print(objetos[0])
 
     print("\nConstruyendo 2-grams para todos los lineas.............")
     objetos_2_grams = construir_bigramas(objetos, n2_gram)
-    print(objetos_2_grams[0])
 
-    print("\nLematizacion de palabras usando spacy ....................")
+    print("\nLematizando de palabras de interés ....................")
     objetos_lematizados = lemmatization(objetos_2_grams, entiquetas_de_interes=['NOUN', 'ADJ', 'VERB', 'ADV'])
-    print(objetos_lematizados[0])
 
     print("\nConstruyendo diccionario de palabras/indices....................")
     id2word = corpora.Dictionary(objetos_lematizados)
@@ -87,7 +85,8 @@ def generar_modelos(n_clusters, corpus, id2word, objetos_lematizados):
     :param objetos_lematizados:
     :return: lda_model, perplexity, coherence_lda
     """
-    print ("====================================================")
+
+    print (50*"=")
     print ("Entrenando modelo con {} Clusters".format(n_clusters))
     lda_model = gensim.models.ldamodel.LdaModel(corpus=corpus,
                                                 id2word=id2word,
@@ -121,6 +120,7 @@ def inicializar_clustering(lineas, read_objects_from_file=False):
     :param read_objects_from_file:
     :return: corpus, id2word, objetos_lematizados
     """
+    
     if read_objects_from_file:
         corpus = pickle.load(open("objects/corpus.pkl", "rb"))
         id2word = pickle.load(open("objects/id2word.pkl", "rb"))
