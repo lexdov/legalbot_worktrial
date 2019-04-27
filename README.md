@@ -54,14 +54,14 @@ Asigna cada documento a un cluster en particular, y calcula datos adicionales pa
 
 ## 5.1 Número óptimo de clusters
 Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
-
+![alt text](https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view)
 Fig 1 -> https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing     
 Fig 2 -> https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
 Fig 3 -> https://drive.google.com/file/d/1HuvpEpglKyxJ62rMAZL4w3W3bY1Ui0-U/view?usp=sharing
 
-Figura 1 -> 5 modelos de 1 a 5 Clusters
-Figura 2 -> 10 modelos de 1 a 10 Clusters
-Figura 3 -> 10 modelos de 1 a 10 Clusters
+Figura 1 -> 5 modelos de 1 a 5 Clusters.
+Figura 2 -> 10 modelos de 1 a 10 Clusters.
+Figura 3 -> 10 modelos de 1 a 10 Clusters.
 
 Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 
