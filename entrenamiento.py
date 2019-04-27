@@ -146,10 +146,10 @@ if __name__ == "__main__":
     """
 
     #Configuracion
-    limit = 7;
+    nro_clusters = 7;
     start = 4;
     step = 1;
-    read_objects_from_file = False
+    read_objects_from_file = True
 
 
     # leer datos a clusterizar
@@ -165,8 +165,8 @@ if __name__ == "__main__":
     perplexity_list =[]
     coherence_list =[]
 
-    for i in range(start,limit,step):
-        print ("\nGenerando modelo número {} de {}".format(i, limit-1))
+    for i in range(start, nro_clusters+1, step):
+        print ("\nGenerando modelo número {} de {}".format(i, nro_clusters))
         model, perplexity, coherence = generar_modelos(i, crps, id2wrd, objs_lemm)
         model.save("models/" + str(i) + "_clustermodel.m")
 
@@ -174,9 +174,9 @@ if __name__ == "__main__":
         perplexity_list.append(perplexity)
         coherence_list.append(coherence)
 
-    x = range(start, limit, step)
+    x = range(start, nro_clusters, step)
     plt.plot(x, coherence_list)
-    plt.xlabel("Num Topics")
-    plt.ylabel("Coherence score")
+    plt.xlabel("Numero de Clusters")
+    plt.ylabel("Coherencia")
     plt.legend(("coherence_values"), loc='best')
     plt.show()
