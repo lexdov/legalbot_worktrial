@@ -74,7 +74,6 @@ def generate_corpus(objetos):
     return id2word, objetos_lematizados
 
 
-
 def generar_modelos(n_clusters, corpus, id2word, objetos_lematizados):
 
     """
@@ -134,7 +133,6 @@ def inicializar_clustering(lineas, read_objects_from_file=False):
         pickle.dump(objetos_lematizados, open("objects/objetos_lematizados.pkl", "wb"))
 
     return corpus, id2word, objetos_lematizados
-
 
 
 
