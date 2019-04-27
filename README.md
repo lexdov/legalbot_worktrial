@@ -35,8 +35,8 @@ Este mecanismo es muy usado feature extractor para determinar las principales pa
 Se usa lemmatizacion en Sustantivos, Adjetivos, Verbos y Adverbios, ya que estas entidades son las que tienen terminaciones con mas variaciones en el idioma español.  Estas variaciones no aportan a resolver el problema en cuestión, ya aumentan la dimensionalidad del problema (cada palabra se considera una dimension en NLP) sin agregar mas semántica a los clusters.
 
 
-## 4.5 No uso de embeddings para visualización 
-Es posible construir WordEmbeddings para la visualizacion de Clusters, pero nuevamente está la limitante de los pocos datos.  Con 50.000 documentos ya es posible construir un Embedding de calidad.
+## 4.5 Embeddings para visualización 
+WordEmbeddings permite graficar clusters de palabras según su etiqueta, lo cual es visualmente muy práctico.
 
 ## 4.6 Persistencia del Preprocesamiento
 Todo el preprocesamiento de los datos conlleva un tiempo importante, y siempre generará el mismo resultado, por lo que he decidido almacenar estos resultados, para así solo tener que ejecutarlos una sola vez;  luego simplemente hay que concentrarse en experimentar con la clusterización.
@@ -105,11 +105,9 @@ Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe reali
 | 3  | ACTIVIDADES DE ARQUITECTURA E INGENIERÍA Y OTRAS ACTIVIDADES TÉCNICAS, CONSTRUCCIÓN, OTRAS ACTIVIDADES DE SERVICIOS.  |
 | 4  | TURISMO RURAL Y URBANO, ASISTENCIA A TURISTAS, TRANSPORTES DE PASAJEROS, HOSPEDAJES, CABAÑAS, Y CAMPING.  |
 
-# 6. Conclusión
+# 6. Conclusiones
+Se ha logrado realizar una Clusterización que captura la semántica existente el dataset.
+Aún cuando el Dataset es pequeño, LDA logra agrupar documentos semejantes que pueden ser etiquetados fácilmente por un humano experto.
+Como trabajo futuro se pueden diseñar algoritmos para detectar stopwords de forma automática, uso de WordEmbeddings y Sentence Embeddings para hacer clusterizaciones basadas en Redes Neuronales; todo esto asumiendo que existe una mayor cantidad de datos (sobre 50.000 documentos)
 
-# 7. Referencias
 
-# 8. Como ejecutar el código
-
-
-# 9. Requirements.txt
