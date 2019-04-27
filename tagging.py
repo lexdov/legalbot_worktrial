@@ -1,6 +1,6 @@
 #############################################################################################
 #
-#   Desafío para postulacion a legalbot.cl
+#   Desafío legalbot.cl
 #   Ricardo Castro Vidal
 #   Abril de 2019
 #   Archivo Fuente (1/2) : tagging.py
