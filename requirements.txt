@@ -1,0 +1,5 @@
+pandas
+spacy
+gensim
+nltk
+matplotlib
