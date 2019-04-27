@@ -165,10 +165,8 @@ if __name__ == "__main__":
     perplexity_list =[]
     coherence_list =[]
 
-
-
     for i in range(start,limit,step):
-        print ("\nGenerando modelo numero {} de {}".format(i, limit-1))
+        print ("\nGenerando modelo número {} de {}".format(i, limit-1))
         model, perplexity, coherence = generar_modelos(i, crps, id2wrd, objs_lemm)
         model.save("models/" + str(i) + "_clustermodel.m")
 
@@ -176,11 +174,9 @@ if __name__ == "__main__":
         perplexity_list.append(perplexity)
         coherence_list.append(coherence)
 
-
     x = range(start, limit, step)
     plt.plot(x, coherence_list)
     plt.xlabel("Num Topics")
     plt.ylabel("Coherence score")
     plt.legend(("coherence_values"), loc='best')
     plt.show()
-
