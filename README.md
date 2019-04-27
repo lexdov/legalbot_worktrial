@@ -65,7 +65,7 @@ Para todos estos experimentos, se logra mayor Coherencia con un número de Clust
 ## 5.2 Etiquetado de Clusters y Palabras Características
 | Cluster Number  | Cluster Name | Palabras Características|
 | :-------------: | :-------------: |------------- |
-| 0  | COMERCIO MINORISTA  |venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar|
+| 0  | COMERCIO |venta, producto, menor, comerciar, articulos, mayor, almacenar, alimento, realizar, comprar|
 | 1  | SERVICIOS PROFESIONALES  |servicio, actividad, prestacion, evento, profesional, produccion, relacionar, desarrollar, tipo, empresa|
 | 2  | CONSTRUCCION / INDUSTRIAL  |construccion, obrar, servicio, equipo, industrial, menor, maquinaria, venta, general, ingenieria|
 | 3  | TRANSPORTE Y MAQUINARIA  |actividad, servicio, transportar, empresarial, reparacion, fabricacion, equipar, tipo, maquinaria, alquiler|
@@ -77,23 +77,23 @@ Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe reali
 
 **Nube de Puntos de todas las palabras mas representativas para la Clusterización**&nbsp;&nbsp;<br/><br/>
 <img src="images/ClusterComercio.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
-**Cluster Comercio**
+**Cluster 0:  Comercio**
 &nbsp;&nbsp;<br/><br/>
 
 
 <img src="images/ClusterServiciosProfesionales.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
-**Cluster Servicios Profesionales**
+**Cluster 1: Servicios Profesionales**
 &nbsp;&nbsp;<br/><br/>
 <img src="images/ClusterConstruccionIndustrial.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
-**Cluster Construcción/Industrial**<br/>
+**Cluster 2: Construcción/Industrial**<br/>
 &nbsp;&nbsp;<br/><br/>
 
 <img src="images/ClusterTransporte.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
-**Cluster Transporte**
+**Cluster 3: Transporte**
 &nbsp;&nbsp;<br/><br/>
 
 <img src="images/ClusterSociedades.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
-**Cluster Sociedades**
+**Cluster 4: Sociedades**
 &nbsp;&nbsp;<br/><br/>
 
 ## 5.3 Ejemplos de documentos en cada cluster
