@@ -7,7 +7,6 @@
 #
 #############################################################################################
 
-
 import pickle
 from gensim.models.ldamodel import LdaModel
 import pandas as pd
@@ -52,7 +51,6 @@ def asignar_doc2cluster(local_model, local_corpus, documentos, print_palabras_ca
         # agregar info al dataframe
         df_clusters = df_clusters.append(pd.Series([int(cluster_number), round(prop_topic,3), cluster_keywords]), ignore_index=True)
 
-
     df_clusters.columns = ['Cluster', 'Relevancia en %', 'Palabras Caracteristicas']
 
     if (print_palabras_caracteristicas):
@@ -79,7 +77,6 @@ def cargar_modelos():
 
     documentos = df.text.values.tolist()
     return my_model, corpus, documentos
-
 
 
 if __name__ == "__main__":
