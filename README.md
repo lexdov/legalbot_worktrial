@@ -54,6 +54,9 @@ Asigna cada documento a un cluster en particular, y calcula datos adicionales pa
 
 ## 5.1 Número óptimo de clusters
 Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.
+
+
+![alt text](https://github.com/lexdov/legalbot_worktrial/tree/master/images/Coherence1.png)
 ![alt text](https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view)
 Fig 1 -> https://drive.google.com/file/d/1A5wcORs2RofDekZvthqnFLOslBLUjY3t/view?usp=sharing     
 Fig 2 -> https://drive.google.com/file/d/1NCK6bw6Lu9Ol22s9eAXCVZX6ut1eTa6h/view?usp=sharing
