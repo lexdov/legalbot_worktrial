@@ -73,27 +73,26 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección visual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras (este etiquetado se puede mejorar con un experto en temas de escrituras de empresas).
 
-<img src="images/all_words.png" alt="drawing" width="450" height="350"/>
+<img src="images/all_words.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 
-**Nube de Puntos de todas las palabras mas representativas para la Clusterización**
-&nbsp;&nbsp;<br/><br/>
-<img src="images/ClusterComercio.png" alt="drawing" width="450" height="350"/>
+**Nube de Puntos de todas las palabras mas representativas para la Clusterización**&nbsp;&nbsp;<br/><br/>
+<img src="images/ClusterComercio.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 **Cluster Comercio**
 &nbsp;&nbsp;<br/><br/>
 
 
-<img src="images/ClusterServiciosProfesionales.png" alt="drawing" width="450" height="350"/>
+<img src="images/ClusterServiciosProfesionales.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 **Cluster Servicios Profesionales**
 &nbsp;&nbsp;<br/><br/>
-<img src="images/ClusterConstruccionIndustrial.png" alt="drawing" width="450" height="350"/>
-
+<img src="images/ClusterConstruccionIndustrial.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 **Cluster Construcción/Industrial**<br/>
 &nbsp;&nbsp;<br/><br/>
-![alt text](images/ClusterTransporte.png)&nbsp;<br/>
+
+<img src="images/ClusterTransporte.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 **Cluster Transporte**
 &nbsp;&nbsp;<br/><br/>
 
-![alt text](images/ClusterSociedades.png)&nbsp;<br/>
+<img src="images/ClusterSociedades.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 **Cluster Sociedades**
 &nbsp;&nbsp;<br/><br/>
 
