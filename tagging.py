@@ -17,13 +17,20 @@ pd.set_option('display.max_columns', 10)
 pd.set_option('display.width', 10000)
 
 
-
 def asignar_doc2cluster(local_model, local_corpus, documentos, print_palabras_caracteristicas=False):
+    """
+    Segun el contenido del documento, es asignado a un Cluster determinado.
+    Se Usa el modelo con 5 clusters, porque tiene mejor Coherencia
+    :param local_model:
+    :param local_corpus:
+    :param documentos:
+    :param print_palabras_caracteristicas:
+    :return: documentos
+    """
 
     df_clusters = pd.DataFrame()
     local_corpus_info = local_model[local_corpus]
     cluster_words_dict = {}
-
 
     for i, row in enumerate(local_corpus_info):
 
@@ -59,8 +66,12 @@ def asignar_doc2cluster(local_model, local_corpus, documentos, print_palabras_ca
     return pd.concat([df_clusters, documentos], axis=1)
 
 
-
 def cargar_modelos():
+    """
+    Carga el modelo de 5 clusters, y los documentos a etiquetar
+    :return: my_model, corpus, documentos
+    """
+
     my_model = LdaModel.load("models/5_clustermodel.m")
     corpus = pickle.load( open("objects/corpus.pkl", "rb"))
     df = pd.read_table('data/objetos_work.txt', header=None)
