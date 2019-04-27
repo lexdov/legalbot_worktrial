@@ -7,7 +7,6 @@
 #
 #############################################################################################
 
-
 import pandas as pd
 import pickle
 import gensim.corpora as corpora
@@ -25,19 +24,14 @@ from gensim.models.phrases import Phraser
 nlp_espanol = spacy.load('es')
 stopwords = stopwords.words("spanish")
 
-
 def build_n_grams(lines):
     return Phraser(Phrases(lines, min_count=5, threshold=100))
-
 
 def construir_bigramas(objetos, n2_gram):
     return [n2_gram[obj] for obj in objetos]
 
-
 def eliminar_stopwords(lineas):
     return [[palabra for palabra in simple_preprocess(str(obj)) if palabra not in stopwords] for obj in lineas]
-
-
 
 def lemmatization(lineas, entiquetas_de_interes):
     """
@@ -55,6 +49,11 @@ def lemmatization(lineas, entiquetas_de_interes):
 
 
 def generate_corpus(objetos):
+    """
+    Realiza el preprocesamiento de los documentos necesario para la Clusterizacion
+    :param objetos:
+    :return:
+    """
     print("\nConstruyendo N-gramas.............")
     n2_gram = build_n_grams(objetos)
     print(n2_gram[objetos[0]])
@@ -101,10 +100,11 @@ def generar_modelos(n_clusters, corpus, id2word, objetos_lematizados):
                                                 per_word_topics=True)
 
 
-    # calcular coherencia del modelo
+    # calcular Coherencia del modelo
     coherence_model_lda = CoherenceModel(model=lda_model, texts=objetos_lematizados, dictionary=id2word, coherence='c_v')
     coherence_lda = coherence_model_lda.get_coherence()
 
+    # calcular Perplexity del modelo
     perplexity = lda_model.log_perplexity(corpus)
 
     print("Perplexity del Modelo => ", perplexity)
@@ -137,17 +137,14 @@ def inicializar_clustering(lineas, read_objects_from_file=False):
 
 
 
-"""
-    
-"""
 
 if __name__ == "__main__":
     """
     Este archivo esta configurado para correr 3 clustering y graficar cual es 
     el que entrega mejor coherencia.
-    Tambien genera todos los archivos de preprocesamiento intermedio.
+    También genera todos los archivos de preprocesamiento intermedio.
     
-    Se pueden cambiar este comportamiento modificando los parametros de la seccion #Configuracion
+    Se pueden cambiar este comportamiento modificando los parametros de la sección #Configuración
     """
 
     #Configuracion
