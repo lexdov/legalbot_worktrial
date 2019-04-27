@@ -1,6 +1,6 @@
 #############################################################################################
 #
-#   Desafío para postulacion a legalbot.cl
+#   Desafío legalbot.cl
 #   Ricardo Castro Vidal
 #   Abril de 2019
 #   Archivo Fuente (1/2) : entrenamiento.py
@@ -120,7 +120,7 @@ def inicializar_clustering(lineas, read_objects_from_file=False):
     :param read_objects_from_file:
     :return: corpus, id2word, objetos_lematizados
     """
-    
+
     if read_objects_from_file:
         corpus = pickle.load(open("objects/corpus.pkl", "rb"))
         id2word = pickle.load(open("objects/id2word.pkl", "rb"))
