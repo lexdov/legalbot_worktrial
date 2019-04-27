@@ -55,8 +55,7 @@ Asigna cada documento a un cluster en particular, y calcula datos adicionales pa
 ## 5.1 Número óptimo de clusters
 Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.  Experimento ejecutado con 5, 10, y 30 Clusters respectivamente.
 
-![alt text](images/Coherence1.png)
-<img src="images/Coherence1.png" alt="drawing" width="500" height="400"/>&nbsp;<br/>
+<img src="images/Coherence1.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 ![alt text](images/Coherence2.png)
 ![alt text](images/Coherence3.png)
 
