@@ -73,7 +73,7 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección visual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras (este etiquetado se puede mejorar con un experto en temas de escrituras de empresas).
 
-![alt text](images/all_words.png)&nbsp;<br/>
+![alt text](images/all_words.png =100x100)&nbsp;<br/>
 **Nube de Puntos de todas las palabras mas representativas para la Clusterización**
 &nbsp;&nbsp;<br/><br/>
 ![alt text](images/ClusterComercio.png)&nbsp;<br/>
