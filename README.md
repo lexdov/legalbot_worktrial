@@ -32,7 +32,7 @@ Se eliminan los stopwords ya que no contribuyen a la semántica de los clusters 
 Este mecanismo es muy usado feature extractor para determinar las principales palabras de cada documento, pero se requiere un cuerpo de datos mas grande (mas documentos y con mas contenido), que permita establecer con claridad las features importantes
 
 ## 4.4 Lemmatización
-Se usa lemmatizacion en Sustantivos, Adjetivos, Verbos y Adverbios, ya que estas entidades son las que tienen terminaciones con mas variaciones en el idioma español.  Estas variaciones no aportan a resolver el problema en cuestión, ya aumentan la dimensionalidad del problema (cada palabra se considera una dimension en NLP) sin agregar mas semántica a los clusters.
+Se usa lemmatizacion en Sustantivos, Adjetivos, Verbos y Adverbios, ya que estas entidades son las que tienen terminaciones con mas variaciones en el idioma español.  Estas variaciones no aportan a resolver el problema en cuestión, ya que aumentan la dimensionalidad del problema (cada palabra se considera una dimensión en NLP) sin contribuir a la semántica a los clusters.
 
 
 ## 4.5 Embeddings para visualización 
@@ -48,19 +48,19 @@ He separado el proceso de Entrenamiento y Tagging de Documentos en dos archivos 
 Realiza el preprocesamiento del texto, y luego construye los Clusters que se requieran
 
 ### 4.7.2 tagging.py
-Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster), porcentaje de pertenencia de cada documento a cada Cluster, y estadísticas de cada Cluster con respecto al total de los documentos.
+Asigna cada documento a un cluster en particular, y calcula datos adicionales para que sean interpretados por el usuario, tales como:  palabras que caracterizan a cada cluster (permite etiquetar dicho cluster) y porcentaje de pertenencia de cada documento a cada Cluster.
 
 # 5. Resultados
 
 ## 5.1 Número óptimo de clusters
-Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.  Experimento ejecutado con 5, 10, y 30 Clusters respectivamente.
+Los siguientes gráficos muestran que la mayor Coherencia se logra con un numero de clusters igual a 5.  He experimentado con 5, 10, y 30 Clusters respectivamente.
 
 <img src="images/Coherence1.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 <img src="images/Coherence2.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 <img src="images/Coherence3.png" alt="drawing" width="450" height="350"/>&nbsp;<br/>
 
 
-Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
+Para todos estos experimentos, se logra mayor Coherencia con un número de Clusters igual a 5.
 
 ## 5.2 Etiquetado de Clusters y Palabras Características
 | Cluster Number  | Cluster Name | Palabras Características|
