@@ -77,14 +77,16 @@ Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe reali
 
 **Nube de Puntos de todas las palabras mas representativas para la Clusterización**
 &nbsp;&nbsp;<br/><br/>
-![alt text](images/ClusterComercio.png)&nbsp;<br/>
+<img src="images/ClusterComercio.png" alt="drawing" width="450" height="350"/>
 **Cluster Comercio**
 &nbsp;&nbsp;<br/><br/>
 
-![alt text](images/ClusterServiciosProfesionales.png)&nbsp;<br/>
+
+<img src="images/ClusterServiciosProfesionales.png" alt="drawing" width="450" height="350"/>
 **Cluster Servicios Profesionales**
 &nbsp;&nbsp;<br/><br/>
-![alt text](images/ClusterConstruccionIndustrial.png)&nbsp;<br/>
+<img src="images/ClusterConstruccionIndustrial.png" alt="drawing" width="450" height="350"/>
+
 **Cluster Construcción/Industrial**<br/>
 &nbsp;&nbsp;<br/><br/>
 ![alt text](images/ClusterTransporte.png)&nbsp;<br/>
