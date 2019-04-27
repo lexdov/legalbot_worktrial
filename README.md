@@ -97,13 +97,13 @@ Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe reali
 &nbsp;&nbsp;<br/><br/>
 
 ## 5.3 Ejemplos de documentos en cada cluster
-| Cluster Number  | Documento |
-| :-------------: | :------------- |
-| 0  | COMERCIO AL POR MENOR DE OTROS PROD. NUEVOS EN ALMC. ESPECIALIZADOS, COMERCIO AL POR MENOR NO ESPECIALIZADO EN ALMACENES, COMERCIO AL POR MENOR NO REALIZADO EN ALMACENES.  |
-| 1  | Enseñanza y capacitación a personas y empresas  |
-| 2  | Venta de insumos mineros. Suministro de insumos, equipos, partes y piezas para la minería. Servicios y asesorías. Importaciones.  |
-| 3  | ACTIVIDADES DE ARQUITECTURA E INGENIERÍA Y OTRAS ACTIVIDADES TÉCNICAS, CONSTRUCCIÓN, OTRAS ACTIVIDADES DE SERVICIOS.  |
-| 4  | TURISMO RURAL Y URBANO, ASISTENCIA A TURISTAS, TRANSPORTES DE PASAJEROS, HOSPEDAJES, CABAÑAS, Y CAMPING.  |
+| Cluster Number  | Documento |Relvancia|
+| :-------------: | :------------- | :-------------: |
+| 0  | COMERCIO AL POR MENOR DE OTROS PROD. NUEVOS EN ALMC. ESPECIALIZADOS, COMERCIO AL POR MENOR NO ESPECIALIZADO EN ALMACENES, COMERCIO AL POR MENOR NO REALIZADO EN ALMACENES.  |94.1%|
+| 1  | Enseñanza y capacitación a personas y empresas  |83.2%|
+| 2  | Venta de insumos mineros. Suministro de insumos, equipos, partes y piezas para la minería. Servicios y asesorías. Importaciones.  |92.8%|
+| 3  | ACTIVIDADES DE ARQUITECTURA E INGENIERÍA Y OTRAS ACTIVIDADES TÉCNICAS, CONSTRUCCIÓN, OTRAS ACTIVIDADES DE SERVICIOS.  |91.2%|
+| 4  | Objeto Social.- El objeto de la Sociedad será: a) Las asesorías legales, comunicacionales, políticas, estratégicas, regulatorias, políticas públicas, legislativas, administrativas y constitucionales, municipales, ambientales, mineras, de seguridad ciudadana, big data, informes en derecho y minutas, análisis de coyuntura, educacionales, ordenamiento territorial y urbano, civiles, tributarias, comerciales, cobranzas, laborales, previsionales y de seguridad social, de salubridad; b) Capacitación y docencia en diversos ámbitos a empresas, organismos públicos y privados, Municipios, Ministerios, Intendencias, Universidades, Institutos, centros de formación técnica o cualquier entidad educativa, ya sea pública o privada, y personas naturales; c) Representación de todo tipo de sociedades, entidades públicas, mixtas o privadas nacionales o extranjeras, así como de personas naturales; d) Cobranzas de carácter judicial y extrajudicial, referente a acreencias de organismos públicos o privados o deudas, ya provengan de obligaciones administrativas, civiles, tributarias, patentes comerciales y de toda clase de tributos; e) Asesorías de carácter inmobiliario y corretaje de propiedades; f) Representaciones y defensas legales judiciales y extrajudiciales de todo tipo de organismos y entes, ya sean públicos o privados, tales como las seguidas en Contraloría General de la República, Tribunal Constitucional, Tribunales de Justicia ordinarios y especiales, Superintendencias, Servicio de Impuestos Internos, Entidades Fiscalizadoras, Conservadores de Bienes Raíces, Notarías Públicas, Entidades Bancarias o Financieras;.  |78.7%|
 
 # 6. Conclusiones
 Se ha logrado realizar una Clusterización que captura la semántica existente el dataset.
