@@ -74,11 +74,27 @@ Para todos estos experimentos, 5 Clusters presenta la mayor coherencia.
 Dado que es un problema No-Supervisado, el etiquetado de los Clusters debe realizarse en forma manual, mediante la inspección visual de las palabras características de cada Cluster.  En este caso he elegido el nombre que me parecía mas adecuado a cada set de palabras (este etiquetado se puede mejorar con un experto en temas de escrituras de empresas).
 
 ![alt text](images/all_words.png)
+
+**Nube de Puntos de todas las palabras mas representativas para la Clusterización**
+
 ![alt text](images/ClusterComercio.png)
+**Cluster Comercio**
+
+
 ![alt text](images/ClusterServiciosProfesionales.png)
+**Cluster Servicios Profesionales**
+
 ![alt text](images/ClusterConstruccionIndustrial.png)
+**Cluster Construcción/Industrial**
+
 ![alt text](images/ClusterTransporte.png)
+**Cluster Transporte**
+
+
 ![alt text](images/ClusterSociedades.png)
+**Cluster Sociedades**
+
+
 ## 5.3 Ejemplos de documentos en cada cluster
 | Cluster Number  | Documento |
 | :-------------: | :------------- |
